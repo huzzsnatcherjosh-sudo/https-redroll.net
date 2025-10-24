@@ -1,51 +1,66 @@
-# Video Platform Interaction Design
+# Video Streaming Platform Interaction Design
 
-## Core User Experience Flow
+## Core Interactive Components
 
-### Main Video Feed (TikTok-Style)
-- **Vertical Video Scrolling**: Users scroll through an endless feed of vertical videos
-- **Auto-play Videos**: Videos automatically play when they enter the viewport
-- **Swipe Navigation**: Touch-friendly swipe up/down to navigate between videos
-- **Video Controls**: Tap to pause/play, double-tap to like, swipe left for user profile
-- **Engagement Actions**: Like, comment, share, and subscribe buttons overlay on each video
-- **Discovery Algorithm**: Videos are recommended based on user behavior and preferences
+### 1. TikTok-Style Vertical Video Feed
+- **Main Interface**: Full-screen vertical video playback with infinite scroll
+- **Video Controls**: Play/pause, volume, progress bar, fullscreen toggle
+- **Engagement Actions**: Like (heart animation), Comment (slide-up panel), Share (popup options)
+- **User Interactions**: Double-tap to like, swipe gestures for navigation
+- **Auto-advance**: Videos automatically advance to next after completion
+- **Discovery**: Algorithm-based recommendations with "For You" and "Following" tabs
 
-### Video Upload System
-- **Drag-and-Drop Interface**: Users can drag video files directly into the upload area
-- **Video Preview**: Real-time preview of uploaded videos with trimming capabilities
-- **Metadata Input**: Title, description, tags, category selection, and thumbnail choice
-- **Processing Status**: Real-time upload progress and video processing status
-- **Publishing Options**: Public, private, or unlisted video settings
+### 2. Video Upload System
+- **Drag & Drop Interface**: Visual drop zone with file preview
+- **Video Processing**: Progress indicator with upload percentage
+- **Metadata Input**: Title, description, tags, category selection
+- **Thumbnail Selection**: Auto-generated thumbnails with custom upload option
+- **Privacy Settings**: Public, unlisted, or private video options
+- **Publishing**: Schedule or immediate publish options
 
-### User Profile Management
-- **Profile Customization**: Edit profile picture, bio, and channel banner
-- **Video Library**: Manage all uploaded videos with edit, delete, and analytics options
-- **Subscription Management**: View subscribed channels and manage notifications
-- **Watch History**: Track recently watched videos and resume playback
-- **Playlist Creation**: Create and manage video playlists for organization
+### 3. Interactive Comment System
+- **Real-time Comments**: Live comment feed with user avatars
+- **Comment Actions**: Like, reply, report, and timestamp links
+- **Nested Replies**: Threaded conversation structure
+- **Comment Sorting**: Top, newest, oldest sorting options
+- **User Mentions**: @mention system with autocomplete
+- **Emoji Reactions**: Quick reaction buttons for comments
 
-### Search and Discovery
-- **Smart Search**: Search videos by title, tags, creator, or description
-- **Category Filters**: Browse videos by categories (Gaming, Music, Education, etc.)
-- **Trending Videos**: Discover popular and trending content
-- **Creator Spotlight**: Featured creators and recommended channels to follow
+### 4. User Profile & Channel Management
+- **Profile Customization**: Banner image, profile picture, bio editing
+- **Channel Analytics**: View counts, subscriber growth, engagement metrics
+- **Video Management**: Edit, delete, or privatize uploaded videos
+- **Playlist Creation**: Create and manage video playlists
+- **Subscription Management**: View subscribed channels and notifications
+- **Settings Panel**: Privacy, notification, and account preferences
 
-### Interactive Features
-- **Real-time Comments**: Live comment system with timestamps
-- **Video Responses**: Users can create video responses to other videos
-- **Live Streaming**: Real-time streaming capabilities with chat
-- **Video Reactions**: Emoji reactions and quick response options
-- **Social Sharing**: Share videos across social media platforms
+## Multi-Turn Interaction Flows
 
-### Navigation Structure
-- **Bottom Navigation**: Home, Discover, Upload, Notifications, Profile
-- **Gesture Controls**: Swipe gestures for quick navigation
-- **Search Bar**: Prominent search functionality with autocomplete
-- **User Menu**: Quick access to settings, subscriptions, and account management
+### Video Discovery Flow
+1. User opens app → Auto-plays first recommended video
+2. User can scroll up/down to browse videos
+3. Each video shows engagement metrics and creator info
+4. Tap creator name → Navigate to their channel
+5. Tap like/comment → Engage with content
+6. Algorithm learns preferences → Improves recommendations
+
+### Content Creation Flow
+1. User taps upload button → Opens camera/upload interface
+2. Select or record video → Preview and trim options
+3. Add metadata and settings → Processing and upload
+4. Video appears in feed → Receives engagement
+5. Creator can monitor performance → Respond to comments
+
+### Community Engagement Flow
+1. User watches video → Can like, comment, or share
+2. Comment opens threaded discussion → Other users can reply
+3. Notifications alert users → About replies and mentions
+4. Creator can pin comments → Moderate discussions
+5. Build community around content → Encourage return visits
 
 ## Technical Implementation Notes
-- Responsive design optimized for mobile-first experience
-- Smooth animations using Anime.js for transitions
-- Video player with custom controls and playback speed options
-- Progressive loading for optimal performance
-- Offline viewing capabilities for downloaded content
+- All interactions use local storage for persistence
+- Video playback uses HTML5 video with custom controls
+- Comments and likes stored in local JSON structure
+- Upload functionality uses FileReader API for preview
+- Responsive design for mobile-first experience
